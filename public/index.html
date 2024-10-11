@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm Ảnh Tương Đồng - CLIP Transformer</title>
+    <script type="module" src="app.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        .section { margin-bottom: 30px; }
+        img { max-width: 100%; height: auto; }
+        #result img { max-width: 300px; }
+        .image-pair { display: flex; gap: 20px; }
+        .status { margin-bottom: 20px; color: green; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tìm Ảnh Tương Đồng - CLIP Transformer</h1>
+
+        <div id="status-message" class="status">Loading models and embeddings, please wait...</div>
+
+        <div class="section">
+            <h2>Tải Lên Ảnh Input</h2>
+            <input type="file" id="upload-input-image" accept="image/*">
+            <div id="uploaded-input-image-container"></div>
+        </div>
+
+        <div class="section">
+            <button id="find-similar">Tìm Ảnh Tương Đồng Nhất</button>
+        </div>
+
+        <div class="section" id="result">
+            <h2>Kết Quả</h2>
+            <!-- Kết quả sẽ được hiển thị ở đây -->
+        </div>
+    </div>
+</body>
+</html>
